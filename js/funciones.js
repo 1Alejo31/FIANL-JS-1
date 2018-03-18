@@ -49,7 +49,7 @@ var estudiantes =
     },
     {
         "codigo": "010",
-        "nombre": "Liz",
+        "nombre": "Guafles",
         "nota": 19
     }
 ];
@@ -85,7 +85,45 @@ function promedio()
             suma = suma+json[i].nota;
         }
         total = suma / 10;
-        document.getElementById("text2").innerHTML = total;
+        document.getElementById("text2").innerHTML = "La nota promedio es:"+"<br>"+total;
     }
     calcular(estudiantes);
+}
+
+function mejor()
+{
+    function calcular(json)
+    {
+        var mej = "La mejor Nota la Obtuvo:"+"<br>";
+        var i;
+        for(i=0;i<json.length;i++)
+        {
+            if(json[i].nota>=50)
+            {
+                mej+=json[i].nombre+"<br>"+"Con una nota de"+json[i].nota;
+            }
+        }
+        alert("Felicitaciones!!!");
+        document.getElementById("text3").innerHTML = mej;
+    }
+    calcular(estudiantes);
+}
+
+function peor()
+{
+    function cal(json)
+    {
+        var pe = "La Menor nota la Obtuvo:"+"<br>";
+        var i;
+        for(i=0;i<json.length;i++)
+        {
+            if(json[i].nota<=10)
+            {
+                pe+=json[i].nombre+"<br>"+"Con una nota de:"+json[i].nota;
+            }
+        }
+        alert("Debes Mejorar!!!");
+        document.getElementById("text4").innerHTML = pe;
+    }
+    cal(estudiantes);
 }
