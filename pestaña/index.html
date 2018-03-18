@@ -9,34 +9,40 @@
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" href="../css/estilos.css">
+    <script type="text/javascript" src="../js/funciones.js"></script>
     <title>Document</title>
 </head>
 <body>
 
-<div class="row">
+<div id="contenedor" class="row">
 
+    
     <div class="col s12 m12 l12" id="cabecera">
-        <h1>Bienvenido</h1>
+        <h4>Calificaciones</h4>
     </div>
-    <div class="col s12 m12 l12" id="contenedor">
+    <div class="col s12 m12 l12" >
         <div class="col s3 m3 l3">
             <div id="conntenedorBoton">
-                <a class="waves-effect waves-linght btn">Estudiantes</a>
+                <a class="waves-effect waves-linght btn" onclick="imprimir1()">Estudiantes</a>
+            </div>
+            <p id="text1"></p>
+        </div>
+        <div class="col s3 m3 l3">
+            <div id="conntenedorBoton">
+                <a class="waves-effect waves-linght btn" onclick="promedio()">Nota Promedio</a>
+                <p id="text2"></p>
             </div>
         </div>
         <div class="col s3 m3 l3">
             <div id="conntenedorBoton">
-                <a class="waves-effect waves-linght btn">Nota Promedio</a>
+                <a class="waves-effect waves-linght btn" onclick="">Mejor Nota</a>
+                <p id="text3"></p>
             </div>
         </div>
         <div class="col s3 m3 l3">
             <div id="conntenedorBoton">
-                <a class="waves-effect waves-linght btn">Mejor Nota</a>
-            </div>
-        </div>
-        <div class="col s3 m3 l3">
-            <div id="conntenedorBoton">
-                <a class="waves-effect waves-linght btn">Peor Nota</a>
+                <a class="waves-effect waves-linght btn" onclick="">Peor Nota</a>
+                <p id="text4"></p>
             </div>
         </div>
     </div>
